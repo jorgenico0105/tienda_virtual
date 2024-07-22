@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="normalice.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img class="header__logo" src="img/logo.png" alt='Logotipo'></a>
+    </header>
+    <nav class="navegation">
+        <a class="navegation__link navegation__link--active" href="index.html">Tienda</a>
+        <a class="navegation__link navegation__link--active" href="nosotros.html">Nosotros</a>
+    </nav>
+    <main class="contenedor__form">
+        <h1>ReactJs</h1>
+        <div class="camisa">
+            <img class="camisa_imagen" src="img/3.jpg" alt="imagen del prodcuto">
+            <div class="camisa__contenido">
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat
+                </p>
+                <form class="form">
+                    <select class="form__campo">
+                        <option disabled selected>--Seleccione Talla--</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="form__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="form__submit" type="submit" value="Agregar Al Carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">
+            Front End Store. All Rights Reserved 
+        </p>
+    </footer>
+</body>
+
+</html>

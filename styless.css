@@ -1,0 +1,247 @@
+:root {
+    --primario: #9C27B0;
+    --primOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOsc: rgb(233, 287, 2);
+    --blanco: white;
+    --negro: black;
+
+    --fontMain: "Staatliches", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES*/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fontMain);
+}
+
+h1 {
+    font-size: 40rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+/*Header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+
+    margin: 3rem 0;
+}
+.navegation{
+    background-color: var(--primOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navegation__link{
+    font-family: var(--fontMain);
+    color: var(--blanco);
+    font-size: 3rem;
+
+}
+.navegation__link--active:hover{
+    color: var(--secundario);
+}
+.footer{
+    background-color: var(--primOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text{
+    font-family: var(--fontMain);
+    font-size: 2.2rem;
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){/*Minimo para que se cimpla */
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.Producto{
+    background-color: var(--primOscuro);
+    padding: 1rem;
+}
+.Producto__imagen{
+    width: 100%;
+}
+
+.Producto__nombre{
+   font-size: 4rem;
+}
+.Producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.Producto__nombre,.Producto__precio{
+    font-family: var(--fontMain);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    grid-column: 1 / 3;
+    background-size: cover;
+}
+.grafico__camisas{
+    grid-row: 2 / 3;
+    background-image: url(./img/grafico1.jpg);
+}
+.grafico__node{
+    background-image: url(./img/grafico2.jpg);
+  
+    grid-row: 8 / 9;
+}
+@media (min-width:768px){
+    .grafico__node{
+        grid-row: 5 / 6;
+        grid-column: 2/4;
+
+    }        
+}
+.nosotros{
+    display: grid;
+    grid-template-rows:repeat(2,auto) ;
+}
+
+@media (min-width:768px){
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }    
+}
+.nosotros__imagen{
+    grid-row: 1 / 2 ;
+    width: 100%;
+}
+@media (min-width:768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}   
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+@media(min-width:768px){
+    .bloques{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+.bloque__img{
+    width: 100%;
+}
+.camisa_imagen{
+    width: 100%;
+}
+@media (min-width:768px ){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem    ;
+        align-items: start;
+    }
+    .camisa_imagen{
+        justify-self: right;
+    }
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.contenedor__form {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.form__campo{
+    border: 1rem solid var(--primOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fontMain);
+    padding: 1rem;
+    appearance: none;   
+}
+.form__submit{
+    font-size: 2rem;
+    font-family: var(--fontMain);
+    padding: 2rem;
+    background-color: var(--secundario);
+    border: none;
+    cursor: pointer;
+    transition: 1s 0.02s;
+    grid-column: 1 / 3;
+}
+.form__submit:hover{
+    transform:scale(1.05,1.05);
+    background-color: var(--secundarioOsc);
+}
+
